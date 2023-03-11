@@ -7,7 +7,20 @@
 #    http://shiny.rstudio.com/
 #
 
+
+#import libraries
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(readr)
+install.packages("zoo")
+library(zoo)
 library(shiny)
+
+
+df <- read_csv("~/Documents/Code/Git/Vegetable-Price-Time-Series/Visualization/Cleaned Food Prices.csv")
+
+
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
