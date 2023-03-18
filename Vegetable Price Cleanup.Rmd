@@ -19,7 +19,7 @@ library(tidyverse)
 library(dplyr)
 library(ggplot2)
 library(readr)
-install.packages("zoo")
+#install.packages("zoo")
 library(zoo)
 ```
 
@@ -31,7 +31,8 @@ dataset
 ```
 ```{r}
 #get a usable dataframe that indexes by date
-data <- dataset %>% select(Date, Commodity, Average) %>% pivot_wider(names_from = c("Commodity"),  values_from = c("Average")) 
+data <- dataset %>% select(Date, Commodity, Average) %>% 
+  pivot_wider(names_from = c("Commodity"),  values_from = c("Average")) 
 data
 
 ```
@@ -63,7 +64,7 @@ df
 ```
 ```{r}
 #export the df to csv
-write_csv(df, "Cleaned Food Prices.csv")
+#write_csv(df, "Cleaned Food Prices.csv")
 
 
 ```
